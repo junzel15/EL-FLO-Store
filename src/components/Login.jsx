@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 
 const Login = () => {
@@ -45,7 +47,9 @@ const Login = () => {
       </h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>
+            <FontAwesomeIcon icon={faEnvelope} /> Email
+          </Form.Label>
           <Form.Control
             type="email"
             name="email"
@@ -59,7 +63,9 @@ const Login = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>
+            <FontAwesomeIcon icon={faLock} /> Password
+          </Form.Label>
           <Form.Control
             type="password"
             name="password"

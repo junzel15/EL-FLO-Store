@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Signup.css";
 
 const Signup = () => {
@@ -51,10 +53,14 @@ const Signup = () => {
 
   return (
     <Container>
-      <h2 className="mt-5 mb-4" style={{ fontWeight: "bold" }}></h2>
+      <h2 className="mt-5 mb-4" style={{ fontWeight: "bold" }}>
+        Sign Up
+      </h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
-          <Form.Label style={{ fontWeight: "bold" }}>Name</Form.Label>
+          <Form.Label>
+            <FontAwesomeIcon icon={faUser} className="icon" /> Name
+          </Form.Label>
           <Form.Control
             type="text"
             name="name"
@@ -68,7 +74,9 @@ const Signup = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="email">
-          <Form.Label style={{ fontWeight: "bold" }}>Email</Form.Label>
+          <Form.Label>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" /> Email
+          </Form.Label>
           <Form.Control
             type="email"
             name="email"
@@ -82,7 +90,9 @@ const Signup = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="password">
-          <Form.Label style={{ fontWeight: "bold" }}>Password</Form.Label>
+          <Form.Label>
+            <FontAwesomeIcon icon={faLock} className="icon" /> Password
+          </Form.Label>
           <Form.Control
             type="password"
             name="password"
@@ -96,8 +106,8 @@ const Signup = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="confirmPassword">
-          <Form.Label style={{ fontWeight: "bold" }}>
-            Confirm Password
+          <Form.Label>
+            <FontAwesomeIcon icon={faLock} className="icon" /> Confirm Password
           </Form.Label>
           <Form.Control
             type="password"

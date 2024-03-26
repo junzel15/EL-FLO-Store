@@ -1,62 +1,73 @@
+/* Signup.css */
 .container {
-  max-width: 200px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  animation: fadeIn 0.5s ease;
 }
 
-h2 {
-  text-align: center;
-  font-size: 28px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
   margin-bottom: 20px;
 }
-form {
-  margin-top: 20px;
-}
 
-form label {
+.form-label {
   font-weight: bold;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
+.icon {
+  margin-right: 10px;
+}
+
+.form-control {
   width: 100%;
   padding: 10px;
-  margin: 5px 0 15px 0;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s ease;
 }
 
-form input[type="text"]:invalid,
-form input[type="email"]:invalid,
-form input[type="password"]:invalid {
-  border-color: red;
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
-.form-control-feedback {
-  display: block;
-  font-size: 80%;
+.invalid-feedback {
   color: #dc3545;
 }
 
-form button {
+.btn-primary {
   width: 100%;
   padding: 10px;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
-  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
 }
 
 .login-link {
   text-align: center;
-  margin-top: 15px;
-  font-size: 16px;
 }
 
 .login-link a {

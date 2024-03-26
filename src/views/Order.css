@@ -1,55 +1,77 @@
-.container {
-  max-width: 600px;
-  margin: 0 auto;
+/* Order.css */
+
+/* Add custom styles for the Order component */
+.order-container {
+  max-width: 500px;
+  margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-h2 {
+.order-title {
+  font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-p {
-  margin-bottom: 20px;
-}
-
-form {
+.order-form {
   display: flex;
   flex-direction: column;
 }
 
-label {
-  margin-bottom: 10px;
+.order-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-textarea,
-select {
+.order-form input,
+.order-form textarea,
+.order-form select {
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
 }
 
-input[type="number"] {
-  padding: 10px;
-  width: 100px;
+.order-form input:focus,
+.order-form textarea:focus,
+.order-form select:focus {
+  border-color: #4caf50;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
+.order-form select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="rgba(0,0,0,.5)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z" /></svg>')
+    no-repeat right 10px top 50%;
+  background-size: 12px;
+}
+
+.order-form button {
+  padding: 12px;
+  background-color: #4caf50;
   color: #fff;
-  font-size: 16px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
-  background-color: #0056b3;
+.order-form button:hover {
+  background-color: #45a049;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

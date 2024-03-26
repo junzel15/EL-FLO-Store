@@ -6,7 +6,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <Container>
-      <div className="logo-container">
+      <div className="logo-container1">
         <img src={logo} alt="Logo" className="logo-image" />
       </div>
     </Container>

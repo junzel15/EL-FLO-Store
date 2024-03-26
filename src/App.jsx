@@ -4,10 +4,9 @@ import routes from "./routes";
 import Home from "./views/Home";
 import Navigation from "./components/Navigation";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
+import Signup from "./components/Signup";
 
 const App = () => {
   return (
@@ -24,8 +23,7 @@ const App = () => {
         ))}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/singup" element={<Signup />} />
       </Routes>
       <Footer />
     </>
