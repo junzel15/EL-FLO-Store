@@ -6,6 +6,8 @@ import {
   faEnvelope,
   faEdit,
   faPaperPlane,
+  faPhone,
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
 
@@ -88,6 +90,19 @@ function Contact() {
           <FontAwesomeIcon icon={faPaperPlane} className="icon" /> Send
         </button>
       </form>
+      <div className="contact-info">
+        <p>
+          <FontAwesomeIcon icon={faEnvelope} />{" "}
+          <a href="mailto:example@example.com">bogsangitelvis@gmail.com</a>
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faPhone} /> 09555261873
+        </p>
+        <p>
+          <FontAwesomeIcon icon={faMapMarkerAlt} /> Pagadian City, Zamboanga Del
+          Sur, 7016, Philippines
+        </p>
+      </div>
     </div>
   );
 }

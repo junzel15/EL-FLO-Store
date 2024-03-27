@@ -23,7 +23,9 @@ function Footer() {
             <ul className="contact-info">
               <li>Email: bogsangitelvis@gnail.com</li>
               <li>Phone: 09555261873</li>
-              <li>Address: Pagadian City</li>
+              <li>
+                Address: agadian City, Zamboanga Del Sur, 7016, Philippines
+              </li>
             </ul>
           </div>
         </div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDollarSign, faTag } from "@fortawesome/free-solid-svg-icons";
 import "./Products.css";
 
 function Products() {
@@ -31,8 +33,14 @@ function Products() {
                   <img src={product.images[0]} alt={product.title} />
                   <div className="product-details">
                     <h3 className="product-title">{product.title}</h3>
-                    <p>Price: ${product.price}</p>
-                    <p>Category: {product.category.name}</p>
+                    <p>
+                      <FontAwesomeIcon icon={faDollarSign} />
+                      Price: ${product.price}
+                    </p>
+                    <p>
+                      <FontAwesomeIcon icon={faTag} />
+                      Category: {product.category.name}
+                    </p>
                   </div>
                 </div>
               </Col>
